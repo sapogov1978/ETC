@@ -10,12 +10,13 @@ I don't know who Alexandar is (my name is Konstantin) and could be a Full Stack 
 
 ## Task
 <blockquote>
+
 Create an application that will allow a user to view transaction data from the Ethereum blockchain associated with a specific wallet address ***W*** that the user inputs, starting with block ***B***. The application should get information on: wallets (addresses) and amounts of ETH associated with transactions made to and from the given wallet W and show them in a simple human-readable way (ideally, through a web page). 
 
 The application should collect and display ***ALL*** transaction data starting from the given block ***B***. 
 
-___Example: 
-If a user requests to view transactions associated with the address 0xaa7a9ca87d3694b5755f213b5d04094b8d0f0a6f from block 9000000 to the current block, your application should be able to crawl and visualize all transaction data (addresses that have sent and received tokens from the address 0xaa7a9ca87d3694b5755f213b5d04094b8d0f0a6f, and how much ETH was used for a given transaction) in that period of time.___
+__Example: 
+If a user requests to view transactions associated with the address 0xaa7a9ca87d3694b5755f213b5d04094b8d0f0a6f from block 9000000 to the current block, your application should be able to crawl and visualize all transaction data (addresses that have sent and received tokens from the address 0xaa7a9ca87d3694b5755f213b5d04094b8d0f0a6f, and how much ETH was used for a given transaction) in that period of time.__
 
 **For bonus points:**
 
@@ -32,6 +33,7 @@ Please include instructions on how to run the project together with the code (so
 A list of officially available ethereum clients can be found here: http://ethdocs.org/en/latest/connecting-to-clients/. Other implementations can be found on the web. Additionally, you can utilize an API from a service such as https://etherscan.io/apis or register an account on infura.io service to access data from the blockchain directly.
 
 See https://etherscan.io/ for an example of how data can be visualized.
+
 </blockquote>
 
 10 days... 1 has already passed. The last time I saw HTML it was v3 and the guys were making the tables by hand. Now it's v5 and I don't know anything about it.
