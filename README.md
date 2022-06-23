@@ -1,12 +1,19 @@
 # Ethereum transactions crawler
 
+## Instruction
+
+1. Please make sure that you have Docker installed, or follow [official docker doc](https://docs.docker.com/engine/install/#server) to install it
+
+
+#STORY
+
 ~~Once upon a time...~~ no, no that. ~~A long time ago in a galaxy far far away...~~ not that even more. :)
 
-I applied for IT Intership in Trace Lab. With [this resume](/readme_files/konstantin_sapogov_resume.pdf) and get an answer from company
+I applied for IT Intership in Trace Labs. With [this resume](/readme_files/konstantin_sapogov_resume.pdf) and get an answer from company
 
 ![](/readme_files/mailfromtracelabs.png)
 
-I don't know who Alexandar is (my name is Konstantin) and could be a Full Stack Engineer as an Intern, but... as I said in my resume - I'm a fast learner and... but... damn... **Challenge accepted.** Thanks Alexandar, and thanks to the guys from Trace Lab.
+I don't know who Alexandar is (my name is Konstantin) and could be a Full Stack Engineer as an Intern, but... as I said in my resume - I'm a fast learner and... but... damn... **Challenge accepted.** Thanks Alexandar, and thanks to the guys from Trace Labs.
 
 ## Task
 <blockquote>
