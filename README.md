@@ -63,5 +63,7 @@ I read a lot about Ethereum, transactions, blocks, API. **Preliminary solution: 
 Spent. Administrative day for immigration and visa questions.
 
 # Day03
+Done for today. Tried to make a container with all services. It seems that everything is almost ready, but it does not work yet. We'll continue tomorrow.
 
+# Day04
 ___To be continued...___
