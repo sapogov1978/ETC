@@ -2,7 +2,11 @@
 
 ## Instruction
 
-1. Please make sure that you have Docker installed, or follow [official docker doc](https://docs.docker.com/engine/install/#server) to install it
+1. Please, make sure that you have Docker installed, or follow [official docker doc](https://docs.docker.com/engine/install/#server) to install it
+2. Run terminal and navigate to folder where you clone a repository
+3. Execute 'docker build -t crawler'
+4. Execute 'docker run -it crawler'
+5. Start you browser and navigate to 'http://test.crawler.test'
 
 
 #STORY
