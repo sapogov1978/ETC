@@ -57,7 +57,7 @@ O'right, lets rock-n-roll step by step.
 Spent. I saw the mail only the next day. My luck.
 
 # Day01
-I read a lot about Ethereum, transactions, blocks, API. **Preliminary solution: Python/Django, PostgreSQL in a Docker container.** Connected Bootstrap, read the HTML specification. All this resulted in an index file with a basic form for entering the wallet address and the starting block. Not much, but for now, as it is.
+I read a lot about Ethereum, transactions, blocks, API. **Preliminary solution: NgInx, Python/Django, MySQL in a Docker container.** Connected Bootstrap, read the HTML specification. All this resulted in an index file with a basic form for entering the wallet address and the starting block. Not much, but for now, as it is.
 
 # Day02
 Spent. Administrative day for immigration and visa questions.

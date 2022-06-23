@@ -15,7 +15,9 @@ RUN apt-get update &&\
     nginx \
     mariadb-server \
     python3-pip build-essential libssl-dev libffi-dev python3-dev \
-    python3-django
+    python3-django \
+    uwsgi \
+    uwsgi-plugin-python3
 
 #----- NGINX WEB SERVER ------
 RUN mkdir -p /etc/nginx/ssl &&\
@@ -32,8 +34,17 @@ RUN service mysql start && \
 	echo "GRANT ALL PRIVILEGES ON *.* TO 'crawler' IDENTIFIED BY 'crawler';" | mysql -u root -pcrawler && \
 	echo "FLUSH PRIVILEGES;" | mysql -u root -pcrawler
 
-#RUN	sed -i "s/\#port/port/" "/etc/mysql/mariadb.conf.d/50-server.cnf" && \
-#    sed -i "s/bind-address/\#bind-address/" "/etc/mysql/mariadb.conf.d/50-server.cnf"
+RUN	sed -i "s/\#port/port/" "/etc/mysql/mariadb.conf.d/50-server.cnf" && \
+    sed -i "s/bind-address/\#bind-address/" "/etc/mysql/mariadb.conf.d/50-server.cnf"
+
+#------ PHYTON -------
+RUN pip3 install virtualenv virtualenvwrapper uwsgi
+RUN echo "export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3" >> ~/.bashrc
+RUN echo "export WORKON_HOME=~/Env" >> ~/.bashrc
+RUN echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
+
+#RUN systemctl enable uwsgi
+#RUN systemctl restart uwsgi
 
 RUN chown -R www-data /var/www/* && chmod -R 755 /var/www/*
 
