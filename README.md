@@ -2,14 +2,15 @@
 
 ## Instruction
 
-1. Please, make sure that you have Docker installed, or follow [official docker doc](https://docs.docker.com/engine/install/#server) to install it
-2. Run terminal and navigate to folder where you clone a repository
-3. Execute `docker build -t crawler`
-4. Execute `docker run -it crawler`
-5. Start you browser and navigate to [http://test.crawler.test](http://test.crawler.test)
+Project tested on Ubuntu 20.04
+
+1. Run terminal and navigate to folder where you clone a repository
+2. Please, make sure that you have GNU Make, Docker and Docker-Compose installed, or follow [official docker doc](https://docs.docker.com/engine/install/#server) to install it. If you are running it on virtual machine you can use NewVM.sh script to automate installation of all components.
+3. Execute `make` 
+5. Start you browser and navigate to [localhost](http://localhost)
 
 
-# STORY
+# STORY and NOTES
 
 ~~Once upon a time...~~ no, no that. ~~A long time ago in a galaxy far far away...~~ not that even more. :)
 
@@ -57,7 +58,7 @@ O'right, lets rock-n-roll step by step.
 Spent. I saw the mail only the next day. My luck.
 
 # Day01
-I read a lot about Ethereum, transactions, blocks, API. **Preliminary solution: NgInx, Python/Django, MySQL in a Docker container.** Connected Bootstrap, read the HTML specification. All this resulted in an index file with a basic form for entering the wallet address and the starting block. Not much, but for now, as it is.
+I read a lot about Ethereum, transactions, blocks, API. **Preliminary solution: NgInx, Python/Django, MySQL in a Docker containers.** Connected Bootstrap, read the HTML specification. All this resulted in an index file with a basic form for entering the wallet address and the starting block. Not much, but for now, as it is.
 
 # Day02
 Spent. Administrative day for immigration and visa questions.
@@ -66,4 +67,6 @@ Spent. Administrative day for immigration and visa questions.
 Done for today. Tried to make a container with all services. It seems that everything is almost ready, but it does not work yet. We'll continue tomorrow.
 
 # Day04
+1 container is not a solution. Split database and server to different containers.
+![](/readme_files/containers_works.png)
 ___To be continued...___
