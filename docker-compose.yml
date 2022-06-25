@@ -1,0 +1,37 @@
+version: "3.9"
+
+networks:
+    django_app:
+        name: django_app
+
+services:
+    db:
+        networks:
+            - django_app
+        container_name: postgres
+        image: postgres
+        restart: always
+        volumes:
+            - ./data/db:/var/lib/postgresql/data
+        environment:
+            - POSTGRES_DB=postgres
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=postgres
+    web:
+        networks:
+            - django_app
+        container_name: django
+        image: django
+        restart: always
+        build: .
+        command: python manage.py runserver 0.0.0.0:8000
+        volumes:
+            - .:/code
+        ports:
+            - "8000:8000"
+        environment:
+            - POSTGRES_NAME=postgres
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=postgres
+        depends_on:
+            - db

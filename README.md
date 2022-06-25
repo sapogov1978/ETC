@@ -7,7 +7,7 @@ Project tested on Ubuntu 20.04
 1. Run terminal and navigate to folder where you clone a repository
 2. Please, make sure that you have GNU Make, Docker and Docker-Compose installed, or follow [official docker doc](https://docs.docker.com/engine/install/#server) to install it. If you are running it on virtual machine you can use NewVM.sh script to automate installation of all components.
 3. Execute `make` 
-5. Start you browser and navigate to [localhost](http://localhost)
+5. Start you browser and navigate to [localhost:8000/eth_crawler](http://localhost:8000/eth_crawler/)
 
 
 # STORY and NOTES
@@ -67,6 +67,10 @@ Spent. Administrative day for immigration and visa questions.
 Done for today. Tried to make a container with all services. It seems that everything is almost ready, but it does not work yet. We'll continue tomorrow.
 
 # Day04
-1 container is not a solution. Split database and server to different containers.
+1 container is not a solution. Split database and server to different containers. Ta-dam!
 ![](/readme_files/containers_works.png)
+
+# Day05
+Completely done with conteiners, back to PostgreSQL. A lot of coding ahead...
+
 ___To be continued...___
