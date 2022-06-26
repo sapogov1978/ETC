@@ -73,4 +73,7 @@ Done for today. Tried to make a container with all services. It seems that every
 # Day05
 Completely done with conteiners, back to PostgreSQL. A lot of coding ahead...
 
+# Day06
+Got the correct response from the Etherium API! Now it's time to parse it, put it in a database, and format it in a "human-readable form." But damn... so slowly, as usual, they consider my resume for a job :)
+
 ___To be continued...___

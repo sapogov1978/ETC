@@ -6,34 +6,41 @@
 #                                                                              #
 # **************************************************************************** #
 
-.PHONY:	all clean fclean re rebuild
+.PHONY:	all clean fclean re rebuild modelchange
 
 CONTAINERS := docker ps -a
-IMAGES := docker images -q
-NETWORK = mandatory
+IMAGES := docker images -a -q
+NETWORK = django_app
 
 all:
-	sudo docker-compose run web django-admin startproject TraceLabsTest .
-	sudo chown -R $$USER:$$USER TraceLabsTest manage.py
-	rm -f TraceLabsTest/settings.py
-	cp correct_settings.py TraceLabsTest/settings.py
-	sudo docker-compose run web python manage.py startapp eth_crawler
-	sudo chown -R $$USER:$$USER eth_crawler
-	-rm -f TraceLabsTest/urls.py
-	cp crawler/project_url.py TraceLabsTest/urls.py
-	-rm rf eth_crawler/*
-	cp -r crawler/* eth_crawler/
-	-rm -f eth_crawler/project_url.py
+	@sudo docker-compose run web django-admin startproject TraceLabsTest .
+	@sudo chown -R $$USER:$$USER TraceLabsTest data manage.py
+	@rm -rf TraceLabsTest/*
+	@cp -r project_settings/* TraceLabsTest/
 	
-	docker-compose up
+	@sudo docker-compose run web python manage.py startapp eth_crawler
+	@sudo chown -R $$USER:$$USER eth_crawler
+	@-rm -rf eth_crawler/*
+	@cp -r app_settings/* eth_crawler/
 	
-# docker-compose -f ./docker_files/docker-compose.yml up -d --build
+	@sudo docker-compose run web python manage.py makemigrations
+	@sudo docker-compose run web python manage.py migrate
 
+	@docker-compose up
+	
 rebuild:
-	-sudo rm -rf TraceLabsTest
-#	-sudo rm -rf data
-	-sudo rm -f manage.py
-	-sudo rm -rf eth_crawler
+	@-sudo rm -rf TraceLabsTest
+#	@-sudo rm -rf data
+	@-sudo rm -f manage.py
+	@-sudo rm -rf eth_crawler
+	
+modelchange:
+	-docker-compose -f down --remove-orphans
+	-docker stop $$($(CONTAINERS))
+	@sudo docker-compose run web python manage.py makemigrations
+	@sudo docker-compose run web python manage.py migrate
+	@docker-compose up
+
 
 clean:
 	-docker-compose -f down --remove-orphans
@@ -45,5 +52,9 @@ fclean: clean
 	-docker system prune -af --volumes
 	-docker network rm $$(docker network ls -q)
 	-docker rmi -f $$($(IMAGES))
+	-sudo rm -rf TraceLabsTest
+	-sudo rm -rf data
+	-sudo rm -f manage.py
+	-sudo rm -rf eth_crawler
 
 re: fclean all

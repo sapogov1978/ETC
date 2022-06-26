@@ -16,19 +16,23 @@
         </header>
         
         <main class="container-sm" style="padding: 20px;">
-            <form name = "query">
+            <form name = "FirstRequest" method = "POST">
+                {% csrf_token %}
                 <fieldset class="row mb-3">
                     <legend>Wallet and starting block info</legend>
-                    <div class="mb-3">
+                    <table class="mb-3">
+                        {{ form }}
+                    </table>
+                    <!-- <div class="mb-3">
                         <p><label for="wallet" class="form-label">Please enter wallet address <em>*</em></label></p>
                         <p><input type = "text" size="60" name = "wallet" class="form-control" placeholder="0xaa7a9ca87d3694b5755f213b5d04094b8d0f0a6f" required></p>
                     </div>
                     <div class="mb-3">
                         <p><label for="st_block" class="form-label">Please enter starting block <em>*</em></label></p>
                         <p><input type = "text" size="60" name = "st_block" class="form-control" placeholder="9000000" required></p>
-                    </div>
+                    </div> -->
                     <div align = "center" style="margin-top: 20px;">
-                        <button type = "submit" name="crawl" class="btn btn-primary btn-lg" formaction = "cgi-bin/walet_block_request.py" formmethod="POST">Crawl</button>
+                        <input type = "submit" value="Crawl" name="crawl" class="btn btn-primary btn-lg">
                     </div>
                 </fieldset>
             </form>

@@ -17,6 +17,7 @@ services:
             - POSTGRES_DB=postgres
             - POSTGRES_USER=postgres
             - POSTGRES_PASSWORD=postgres
+            
     web:
         networks:
             - django_app
