@@ -76,4 +76,7 @@ Completely done with conteiners, back to PostgreSQL. A lot of coding ahead...
 # Day06
 Got the correct response from the Etherium API! Now it's time to parse it, put it in a database, and format it in a "human-readable form." But damn... so slowly, as usual, they consider my resume for a job :)
 
+# Day07
+There is nothing to be proud of today. The only thing that happened was to make a model and parse the data received from the API into the database. "human-readable form" not even started. I hope tomorrow will be better.
+
 ___To be continued...___
