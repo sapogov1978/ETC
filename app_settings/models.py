@@ -7,7 +7,7 @@ class Blocks(models.Model):
     nonce = models.CharField(max_length=8)
     blockHash = models.CharField(max_length=70)
     transactionIndex = models.CharField(max_length=2)
-    From = models.CharField(max_length=45)
+    _from = models.CharField(max_length=45, db_column="From")
     to = models.CharField(max_length=45)
     value = models.CharField(max_length=2)
     gas = models.CharField(max_length=10)

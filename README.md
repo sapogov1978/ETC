@@ -79,4 +79,10 @@ Got the correct response from the Etherium API! Now it's time to parse it, put i
 # Day07
 There is nothing to be proud of today. The only thing that happened was to make a model and parse the data received from the API into the database. "human-readable form" not even started. I hope tomorrow will be better.
 
-___To be continued...___
+# Day08
+No coding, just reading. Postgres official docs. A rare bore.
+
+# Day09
+Final day whatever finishing or not. 
+
+___To be updated today...___
