@@ -12,7 +12,8 @@ def parse(text_srcs):
         conn = create_engine('postgresql+psycopg2://' + os.environ.get('POSTGRES_USER') + ':' + os.environ.get('POSTGRES_PASSWORD') + '@db:5432/postgres')
         df = pd.DataFrame(blocks)
         df.to_sql('Blocks', conn, if_exists='replace', index=False)
-
+        
+    
 def index(request):
     if request.method == "POST":
         wallet = request.POST.get("wallet")
@@ -21,7 +22,7 @@ def index(request):
         url = 'https://api.etherscan.io/api?module=account&action=txlist&address=' + wallet + '&startblock=' + st_block + '&endblock=&page=&offset=&sort=asc&apikey=' + api_key
         api_response = requests.get(url)
         parse(api_response.text)
-        return HttpResponse(api_response.text)
+        return HttpResponse("response.html".objectsAll())
     else:
         userform = FirstRequest()
         return render(request, "index.html", {"form": userform})

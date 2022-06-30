@@ -84,5 +84,10 @@ No coding, just reading. Postgres official docs. A rare bore.
 
 # Day09
 Final day whatever finishing or not. 
+and
+FAIL! I couldn't get it's working. My luck once again. But i'll return to this task and finish it later because my attitude. 
 
-___To be updated today...___
+# Conclusions
+1. Python is good, but it needs to be studied more deeply.
+2. Never use monster like Django to do a simple task
+3. More docker (3 days spent for environment)
